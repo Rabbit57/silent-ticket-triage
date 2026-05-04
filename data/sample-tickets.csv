@@ -1,0 +1,8 @@
+id,customer,plan,mrr,age_hours,subject
+TCK-1048,Northstar Logistics,Enterprise,4200,6,Shipment dashboard is down for our entire warehouse team
+TCK-1049,Atlas Design Co,Growth,780,20,Need to cancel unless invoicing bug is fixed
+TCK-1050,Mori Health,Enterprise,5100,3,SSO login fails after Okta certificate rotation
+TCK-1051,Blue Pine Retail,Starter,89,16,Question about adding two more users
+TCK-1052,Fable Finance,Growth,1320,9,API webhook retries creating duplicate records
+TCK-1053,Urban Grove,Starter,59,36,Refund request for unused seats
+TCK-1054,Ridgeway Labs,Growth,940,4,Import keeps timing out on 90k rows

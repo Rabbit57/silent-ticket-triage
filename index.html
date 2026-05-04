@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Silent Ticket Triage</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">ST</div>
+          <div>
+            <h1>Silent Ticket Triage</h1>
+            <p>AI support queue automation</p>
+          </div>
+        </div>
+
+        <section class="control-panel" aria-label="Controls">
+          <div class="field">
+            <label for="confidence">Auto-send threshold</label>
+            <div class="range-row">
+              <input id="confidence" type="range" min="60" max="95" value="82" />
+              <output id="confidenceValue" for="confidence">82%</output>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="tone">Reply tone</label>
+            <select id="tone">
+              <option value="direct">Direct</option>
+              <option value="warm">Warm</option>
+              <option value="formal">Formal</option>
+            </select>
+          </div>
+
+          <button id="exportCsv" class="primary-button" type="button">Export triage CSV</button>
+        </section>
+
+        <nav class="filters" aria-label="Ticket filters">
+          <button class="filter-button active" data-filter="all" type="button">All</button>
+          <button class="filter-button" data-filter="critical" type="button">Critical</button>
+          <button class="filter-button" data-filter="high" type="button">High</button>
+          <button class="filter-button" data-filter="billing" type="button">Billing</button>
+          <button class="filter-button" data-filter="churn" type="button">Churn</button>
+        </nav>
+      </aside>
+
+      <section class="workspace">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Demo automation</p>
+            <h2>Support inbox triaged into actions and reply drafts</h2>
+          </div>
+          <div class="status-pill">Local demo data</div>
+        </header>
+
+        <section class="metrics" aria-label="Triage metrics">
+          <article>
+            <span id="metricTickets">0</span>
+            <p>Tickets analyzed</p>
+          </article>
+          <article>
+            <span id="metricCritical">0</span>
+            <p>Critical or high</p>
+          </article>
+          <article>
+            <span id="metricAutosend">0</span>
+            <p>Auto-send ready</p>
+          </article>
+          <article>
+            <span id="metricHours">0h</span>
+            <p>Estimated time saved</p>
+          </article>
+        </section>
+
+        <section class="main-grid">
+          <div class="queue-panel">
+            <div class="section-heading">
+              <h3>Ranked queue</h3>
+              <span id="queueCount">0 tickets</span>
+            </div>
+            <div id="ticketList" class="ticket-list"></div>
+          </div>
+
+          <article id="ticketDetail" class="detail-panel" aria-live="polite"></article>
+        </section>
+      </section>
+    </main>
+
+    <script src="./src/app.js"></script>
+  </body>
+</html>
