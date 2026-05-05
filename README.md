@@ -1,6 +1,6 @@
 # Silent Ticket Triage
 
-A small AI automation demo for support teams that want no-meeting, async ticket triage. It ranks inbound tickets, identifies intent and account risk, routes each item to an owner, and generates a reply draft.
+A small AI automation demo for support teams that need faster ticket triage. It ranks inbound tickets, identifies intent and account risk, routes each item to an owner, and generates a reply draft.
 
 [Live demo](https://rabbit57.github.io/silent-ticket-triage/)
 
@@ -8,7 +8,7 @@ A small AI automation demo for support teams that want no-meeting, async ticket 
 
 ## Why this demo exists
 
-This is designed as a portfolio-ready artifact for selling fixed-scope AI automation work. It shows a buyer the result before any custom work starts:
+This is designed as a portfolio-ready artifact for selling AI automation dashboard and workflow prototype work. It shows a buyer the result before any custom work starts:
 
 - support tickets are scored by urgency and account value
 - each ticket gets an intent, owner, risk signal list, and next action
